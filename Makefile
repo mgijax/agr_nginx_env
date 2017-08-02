@@ -1,11 +1,11 @@
 all:
-	docker build -t agrdocker/nginx:develop .
+	docker build -t agrdocker/agr_nginx_env:develop .
 
 push:
-	docker push agrdocker/nginx:develop
+	docker push agrdocker/agr_nginx_env:develop
 
 pull:
-	docker pull agrdocker/nginx:develop
+	docker pull agrdocker/agr_nginx_env:develop
 
 bash:
-	docker run -t -i agrdocker/nginx:develop bash
+	docker run -t -i agrdocker/agr_nginx_env:develop bash
