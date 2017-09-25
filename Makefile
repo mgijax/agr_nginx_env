@@ -1,5 +1,5 @@
 all:
-	docker build -t agrdocker/agr_nginx_env:latest .
+	docker build -t agrdocker/agr_nginx_env:latest -f Dockerfile_prod .
 
 push:
 	docker push agrdocker/agr_nginx_env:latest
@@ -22,3 +22,6 @@ prod-pull:
 
 prod-bash:
 	docker run -t -i agrdocker/agr_nginx_prod:latest bash
+
+build:
+	docker build -t agrdocker/agr_nginx_prod:latest -f Dockerfile_build .
